@@ -82,6 +82,12 @@
     <Compile Include="Form\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Object\Account.cs" />
     <Compile Include="Object\DMLoaiTB.cs" />
     <Compile Include="Object\Thietbi.cs" />
@@ -97,8 +103,12 @@
       <DependentUpon>QLTTBCNTTDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="suport\ConnectionString.cs" />
+    <Compile Include="suport\QueryTK.cs" />
     <EmbeddedResource Include="Form\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
