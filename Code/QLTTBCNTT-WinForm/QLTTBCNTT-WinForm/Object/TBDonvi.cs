@@ -24,7 +24,7 @@ namespace QLTTBCNTT_WinForm.Object
         public int IdTBDV { get => idTBDV; set => idTBDV = value; }
         public int IdDV { get => idDV; set => idDV = value; }
         public int IdTB { get => idTB; set => idTB = value; }
-
+        
         public string DateBorrow1 { get => DateBorrow; set => DateBorrow = value; }
         public string DateReturn1 { get => DateReturn; set => DateReturn = value; }
     }
