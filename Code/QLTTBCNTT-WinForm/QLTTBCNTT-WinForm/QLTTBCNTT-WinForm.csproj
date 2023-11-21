@@ -88,6 +88,12 @@
     <Compile Include="Form\FormDV.Designer.cs">
       <DependentUpon>FormDV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FormQN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormQN.Designer.cs">
+      <DependentUpon>FormQN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormQN.resx">
+      <DependentUpon>FormQN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
