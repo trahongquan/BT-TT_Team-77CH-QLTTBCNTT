@@ -103,6 +103,8 @@ namespace QLTTBCNTT_WinForm
 
         private void btnChildFormQN_Click(object sender, EventArgs e)
         {
+            FormQN FormQN = new FormQN();
+            OpenChildForm(FormQN, sender);
         }
 
         private void btnChildFormTBDV_Click(object sender, EventArgs e)
