@@ -82,6 +82,12 @@
     <Compile Include="Form\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FormDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormDV.Designer.cs">
+      <DependentUpon>FormDV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,7 +109,12 @@
       <DependentUpon>QLTTBCNTTDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="suport\ConnectionString.cs" />
+    <Compile Include="suport\QueryDonvi.cs" />
+    <Compile Include="suport\QueryQuannhan.cs" />
     <Compile Include="suport\QueryTK.cs" />
+    <EmbeddedResource Include="Form\FormDV.resx">
+      <DependentUpon>FormDV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
