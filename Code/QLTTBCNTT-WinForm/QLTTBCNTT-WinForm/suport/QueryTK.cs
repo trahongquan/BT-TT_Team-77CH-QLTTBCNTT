@@ -18,7 +18,7 @@ namespace QLTTBCNTT_WinForm.suport
         private SqlCommand sqlCMD;
 
         public QueryTK() { }
-        
+
         public DataTable getTableAccount()
         {
             DataTable accountTab = new DataTable();
@@ -103,7 +103,7 @@ namespace QLTTBCNTT_WinForm.suport
             }
             catch (Exception ex)
             {
-                
+
                 throw ex;
             }
             finally
@@ -206,7 +206,7 @@ namespace QLTTBCNTT_WinForm.suport
                 SqlDataReader data = cmd.ExecuteReader();
 
                 bool b = data.Read();
-               
+
 
                 adminCnt.Close();
 
@@ -221,3 +221,4 @@ namespace QLTTBCNTT_WinForm.suport
 
     }
 }
+
