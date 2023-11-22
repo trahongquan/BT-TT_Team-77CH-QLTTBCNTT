@@ -99,6 +99,8 @@ namespace QLTTBCNTT_WinForm
         #region button header
         private void btnChildFormTB_Click(object sender, EventArgs e)
         {
+            FormTB FormTB = new FormTB();
+            OpenChildForm(FormTB, sender);
         }
 
         private void btnChildFormQN_Click(object sender, EventArgs e)
@@ -109,6 +111,8 @@ namespace QLTTBCNTT_WinForm
 
         private void btnChildFormTBDV_Click(object sender, EventArgs e)
         {
+            FormTBDV FormTBDV = new FormTBDV();
+            OpenChildForm(FormTBDV, sender);
         }
 
         private void btnChildFormDMTB_Click(object sender, EventArgs e)
@@ -125,10 +129,14 @@ namespace QLTTBCNTT_WinForm
 
         private void btnChildFormTBQN_Click(object sender, EventArgs e)
         {
+            FormTBQN FormTBQN = new FormTBQN();
+            OpenChildForm(FormTBQN, sender);
         }
 
         private void Dashboard_Click(object sender, EventArgs e)
         {
+            Dashboard DB = new Dashboard();
+            OpenChildForm(DB, sender);
         }
         #endregion
 

@@ -106,6 +106,12 @@
     <Compile Include="Form\FormQN.Designer.cs">
       <DependentUpon>FormQN.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FormTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormTB.Designer.cs">
+      <DependentUpon>FormTB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,7 @@
     <Compile Include="suport\QueryDonvi.cs" />
     <Compile Include="suport\QueryLoaiTB.cs" />
     <Compile Include="suport\QueryQuannhan.cs" />
+    <Compile Include="suport\QueryTB.cs" />
     <Compile Include="suport\QueryTK.cs" />
     <EmbeddedResource Include="Form\FormAccMgr.resx">
       <DependentUpon>FormAccMgr.cs</DependentUpon>
@@ -154,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormQN.resx">
       <DependentUpon>FormQN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormTB.resx">
+      <DependentUpon>FormTB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Frm_ChangePass.resx">
       <DependentUpon>Frm_ChangePass.cs</DependentUpon>
