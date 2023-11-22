@@ -76,11 +76,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\FormAccMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormAccMgr.Designer.cs">
+      <DependentUpon>FormAccMgr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormDV.Designer.cs">
+      <DependentUpon>FormDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormQN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormQN.Designer.cs">
+      <DependentUpon>FormQN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Frm_ChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_ChangePass.Designer.cs">
+      <DependentUpon>Frm_ChangePass.cs</DependentUpon>
     </Compile>
     <Compile Include="Object\Account.cs" />
     <Compile Include="Object\DMLoaiTB.cs" />
@@ -97,8 +127,26 @@
       <DependentUpon>QLTTBCNTTDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="suport\ConnectionString.cs" />
+    <Compile Include="suport\QueryDonvi.cs" />
+    <Compile Include="suport\QueryQuannhan.cs" />
+    <Compile Include="suport\QueryTK.cs" />
+    <EmbeddedResource Include="Form\FormAccMgr.resx">
+      <DependentUpon>FormAccMgr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormDV.resx">
+      <DependentUpon>FormDV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormQN.resx">
+      <DependentUpon>FormQN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_ChangePass.resx">
+      <DependentUpon>Frm_ChangePass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
