@@ -578,3 +578,5 @@ D:\VB2\3. Ki.III\8.TTN-77CH\version\QLTTBCNTT-WinForm-Ki3 - 6\QLTTBCNTT-WinForm\
 D:\VB2\3. Ki.III\8.TTN-77CH\version\QLTTBCNTT-WinForm-Ki3 - 6\QLTTBCNTT-WinForm\obj\Debug\QLTTBCNTT-WinForm.exe
 D:\VB2\3. Ki.III\8.TTN-77CH\version\QLTTBCNTT-WinForm-Ki3 - 6\QLTTBCNTT-WinForm\obj\Debug\QLTTBCNTT-WinForm.pdb
 >>>>>>> origin/release_v1.2
+D:\VB2\3. Ki.III\8.TTN-77CH\BT-TT_Team-77CH-QLTTBCNTT\Code\QLTTBCNTT-WinForm\QLTTBCNTT-WinForm\obj\Debug\QLTTBCNTT_WinForm.FormAccMgr.resources
+D:\VB2\3. Ki.III\8.TTN-77CH\BT-TT_Team-77CH-QLTTBCNTT\Code\QLTTBCNTT-WinForm\QLTTBCNTT-WinForm\obj\Debug\QLTTBCNTT_WinForm.Frm_ChangePass.resources

@@ -106,15 +106,12 @@
     <Compile Include="Form\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="Form\Frm_ChangePass.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Frm_ChangePass.Designer.cs">
       <DependentUpon>Frm_ChangePass.cs</DependentUpon>
     </Compile>
->>>>>>> origin/release_v1.2
     <Compile Include="Object\Account.cs" />
     <Compile Include="Object\DMLoaiTB.cs" />
     <Compile Include="Object\Thietbi.cs" />
@@ -133,12 +130,9 @@
     <Compile Include="suport\QueryDonvi.cs" />
     <Compile Include="suport\QueryQuannhan.cs" />
     <Compile Include="suport\QueryTK.cs" />
-<<<<<<< HEAD
-=======
     <EmbeddedResource Include="Form\FormAccMgr.resx">
       <DependentUpon>FormAccMgr.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> origin/release_v1.2
     <EmbeddedResource Include="Form\FormDV.resx">
       <DependentUpon>FormDV.cs</DependentUpon>
     </EmbeddedResource>
