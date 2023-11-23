@@ -94,6 +94,12 @@
     <Compile Include="Form\FormDMLTB.Designer.cs">
       <DependentUpon>FormDMLTB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormTBDV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,7 @@
       <DependentUpon>QLTTBCNTTDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="suport\ConnectionString.cs" />
+    <Compile Include="suport\QueryDashBoard.cs" />
     <Compile Include="suport\QueryDonvi.cs" />
     <Compile Include="suport\QueryLoaiTB.cs" />
     <Compile Include="suport\QueryQuannhan.cs" />
@@ -163,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormDMLTB.resx">
       <DependentUpon>FormDMLTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormDV.resx">
       <DependentUpon>FormDV.cs</DependentUpon>
