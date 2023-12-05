@@ -150,8 +150,8 @@ namespace QLTTBCNTT_WinForm
             var TBDV = dtgvTBDV.SelectedRows[0];
             cbbIDDV.Text = TBDV.Cells[1].Value.ToString();
             cbbIDTB.SelectedValue = TBDV.Cells[2].Value;
-            DateBorrow.Value = Convert.ToDateTime(TBDV.Cells[3].Value.ToString());
-            DateReturn.Value = Convert.ToDateTime(TBDV.Cells[4].Value.ToString());
+            if(!TBDV.Cells[3].Value.ToString().Equals("")) DateBorrow.Value = Convert.ToDateTime(TBDV.Cells[3].Value.ToString());
+            if (!TBDV.Cells[4].Value.ToString().Equals(""))  DateReturn.Value = Convert.ToDateTime(TBDV.Cells[4].Value.ToString());
         }
 
         private void dtgvTBDV_MouseClick(object sender, MouseEventArgs e)
@@ -165,7 +165,7 @@ namespace QLTTBCNTT_WinForm
 
         private Boolean CheckIDTB_TBDV()
         {
-            string ds = QueryTBDV.getTBDV_idTB_check(cbbIDTB.SelectedValue.ToString()) /*+ new QueryTBQN().getTBQN_idTB_check(cbbIDTB.SelectedValue.ToString())*/;
+            string ds = QueryTBDV.getTBDV_idTB_check(cbbIDTB.SelectedValue.ToString(), DateBorrow.Value, DateReturn.Value) /*+ new QueryTBQN().getTBQN_idTB_check(cbbIDTB.SelectedValue.ToString())*/;
             if (ds.Equals(""))
             {
                 MessageBox.Show("Thiết bị hợp lệ, chưa được biên chế hoặc cho mượn");

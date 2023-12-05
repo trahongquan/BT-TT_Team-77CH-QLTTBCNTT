@@ -120,6 +120,7 @@ namespace QLTTBCNTT_WinForm.suport
             }
         }
         #endregion
+
         #region query TB, QN theo id
         public string getTBDV_idTB(string idTB)
         {
