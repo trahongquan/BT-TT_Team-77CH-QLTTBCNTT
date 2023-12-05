@@ -198,7 +198,7 @@ namespace QLTTBCNTT_WinForm.suport
                             DateReturn >= inputDateborrowData && DateReturn <= inputDateReturnData ||
                             Dateborrow <= inputDateborrowData && DateReturn >= inputDateReturnData )
                         {
-                            MessageBox.Show("Thiết bị đang được cho mượn \n Xin vui lòng chọn khoảng thời gian khác hoặc thiết bị khác");
+                            //MessageBox.Show("Thiết bị đang được cho mượn \n Xin vui lòng chọn khoảng thời gian khác hoặc thiết bị khác");
                             kq += bangDV.Tables[0].Rows[0][2].ToString();
                         }
                     }

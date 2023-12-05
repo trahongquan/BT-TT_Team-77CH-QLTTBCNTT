@@ -53,6 +53,10 @@ namespace QLTTBCNTT_WinForm
         }
         private void ModifyTBDV_Click(object sender, EventArgs e)
         {
+            if (!CheckIDTB_TBDV())
+            {
+                return;
+            }
             if (dtgvTBDV.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Chưa chọn dòng");
@@ -165,14 +169,18 @@ namespace QLTTBCNTT_WinForm
 
         private Boolean CheckIDTB_TBDV()
         {
-            string ds = QueryTBDV.getTBDV_idTB_check(cbbIDTB.SelectedValue.ToString(), DateBorrow.Value, DateReturn.Value) /*+ new QueryTBQN().getTBQN_idTB_check(cbbIDTB.SelectedValue.ToString())*/;
+            if (DateBorrow.Value > DateReturn.Value)
+            {
+                MessageBox.Show("Bạn cần chọn ngày trả sau ngày mượn");
+                return false;
+            }
+            string ds = QueryTBDV.getTBDV_idTB_check(cbbIDTB.SelectedValue.ToString(), DateBorrow.Value, DateReturn.Value) + new QueryTBQN().getTBQN_idTB_check(cbbIDTB.SelectedValue.ToString(), DateBorrow.Value, DateReturn.Value);
             if (ds.Equals(""))
             {
                 MessageBox.Show("Thiết bị hợp lệ, chưa được biên chế hoặc cho mượn");
                 return true;
             } else {
                 MessageBox.Show("Thiết bị đã được biên chế hoặc được cho mượn. Xin vui lòng chọn thiết bị khác!");
-                cbbIDTB.Text = "";
                 return false;
             }
         }

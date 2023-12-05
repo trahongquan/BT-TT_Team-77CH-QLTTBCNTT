@@ -39,17 +39,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbbIDQN = new System.Windows.Forms.ComboBox();
+            this.dMQuanNhanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLTTBCNTTDataSet = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet();
             this.cbbIDTB = new System.Windows.Forms.ComboBox();
+            this.dMThietBiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DateBorrow = new System.Windows.Forms.DateTimePicker();
             this.DateReturn = new System.Windows.Forms.DateTimePicker();
-            this.qLTTBCNTTDataSet = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet();
-            this.dMQuanNhanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dM_QuanNhanTableAdapter = new QLTTBCNTT_WinForm.QLTTBCNTTDataSetTableAdapters.DM_QuanNhanTableAdapter();
-            this.dMThietBiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dM_ThietBiTableAdapter = new QLTTBCNTT_WinForm.QLTTBCNTTDataSetTableAdapters.DM_ThietBiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTBQN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMQuanNhanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMThietBiBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,7 +160,16 @@
             this.cbbIDQN.Size = new System.Drawing.Size(129, 21);
             this.cbbIDQN.TabIndex = 10;
             this.cbbIDQN.ValueMember = "IDQuannhan";
-            this.cbbIDQN.TextChanged += new System.EventHandler(this.ccbidQN_TextChanged);
+            // 
+            // dMQuanNhanBindingSource
+            // 
+            this.dMQuanNhanBindingSource.DataMember = "DM_QuanNhan";
+            this.dMQuanNhanBindingSource.DataSource = this.qLTTBCNTTDataSet;
+            // 
+            // qLTTBCNTTDataSet
+            // 
+            this.qLTTBCNTTDataSet.DataSetName = "QLTTBCNTTDataSet";
+            this.qLTTBCNTTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cbbIDTB
             // 
@@ -174,7 +183,11 @@
             this.cbbIDTB.Size = new System.Drawing.Size(129, 21);
             this.cbbIDTB.TabIndex = 11;
             this.cbbIDTB.ValueMember = "IdThietBi";
-            this.cbbIDTB.TextChanged += new System.EventHandler(this.cbbidTB_TextChanged);
+            // 
+            // dMThietBiBindingSource
+            // 
+            this.dMThietBiBindingSource.DataMember = "DM_ThietBi";
+            this.dMThietBiBindingSource.DataSource = this.qLTTBCNTTDataSet;
             // 
             // DateBorrow
             // 
@@ -194,24 +207,9 @@
             this.DateReturn.Size = new System.Drawing.Size(129, 20);
             this.DateReturn.TabIndex = 15;
             // 
-            // qLTTBCNTTDataSet
-            // 
-            this.qLTTBCNTTDataSet.DataSetName = "QLTTBCNTTDataSet";
-            this.qLTTBCNTTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dMQuanNhanBindingSource
-            // 
-            this.dMQuanNhanBindingSource.DataMember = "DM_QuanNhan";
-            this.dMQuanNhanBindingSource.DataSource = this.qLTTBCNTTDataSet;
-            // 
             // dM_QuanNhanTableAdapter
             // 
             this.dM_QuanNhanTableAdapter.ClearBeforeFill = true;
-            // 
-            // dMThietBiBindingSource
-            // 
-            this.dMThietBiBindingSource.DataMember = "DM_ThietBi";
-            this.dMThietBiBindingSource.DataSource = this.qLTTBCNTTDataSet;
             // 
             // dM_ThietBiTableAdapter
             // 
@@ -239,8 +237,8 @@
             this.Text = "FormTBQN";
             this.Load += new System.EventHandler(this.FormTBQN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTBQN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMQuanNhanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMThietBiBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
