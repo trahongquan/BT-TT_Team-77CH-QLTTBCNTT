@@ -120,6 +120,7 @@ namespace QLTTBCNTT_WinForm.suport
             }
         }
         #endregion
+
         #region query TB, QN theo id
         public string getTBDV_idTB(string idTB)
         {
@@ -170,11 +171,11 @@ namespace QLTTBCNTT_WinForm.suport
             return DV;
         }
 
-        public string getTBQN_idTB_check(string idTB)
+        public string getTBQN_idTB_check(string idTB, DateTime Dateborrow, DateTime DateReturn)
         {
             string kq = "";
             DataSet bangDV = new DataSet();
-            string query = "select * from TB_Donvi where idThietbi = " + idTB;
+            string query = "select * from TB_QN where idThietbi = " + idTB;
             try
             {
                 using (SqlConnection sqlConnection = ConnectionString.getConnection())
@@ -183,14 +184,29 @@ namespace QLTTBCNTT_WinForm.suport
                     dataAdapter = new SqlDataAdapter(query, sqlConnection); //tao 1 ket noi CSDL moi
                     dataAdapter.Fill(bangDV);   // dien du lieu vao bang
                     sqlConnection.Close();
-                    kq = bangDV.Tables[0].Rows[0][2].ToString();
+
+                    for (int i = 0; i < bangDV.Tables[0].Rows.Count; i++)
+                    {
+                        string DateborrowData = bangDV.Tables[i].Rows[0][3].ToString();
+                        string DateReturnData = bangDV.Tables[i].Rows[0][4].ToString();
+
+                        DateTime inputDateborrowData = DateTime.Parse(DateborrowData);
+                        DateTime inputDateReturnData = DateTime.Parse(DateReturnData);
+
+                        // So sánh xem inputDateTime có nằm trong khoảng dateTimePicker1Value và dateTimePicker2Value hay không
+                        if (Dateborrow >= inputDateborrowData && Dateborrow <= inputDateReturnData ||
+                            DateReturn >= inputDateborrowData && DateReturn <= inputDateReturnData ||
+                            Dateborrow <= inputDateborrowData && DateReturn >= inputDateReturnData)
+                        {
+                            //MessageBox.Show("Thiết bị đang được cho mượn \n Xin vui lòng chọn khoảng thời gian khác hoặc thiết bị khác");
+                            kq += bangDV.Tables[0].Rows[0][2].ToString();
+                        }
+                    }
                     return kq;
                 }
             }
             catch
             {
-                //MessageBox.Show("Lỗi kết nối đến Cơ sở dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                MessageBox.Show("Thiết bị hợp lệ, chưa được biên chế hoặc cho mượn");
                 return kq;
             }
         }

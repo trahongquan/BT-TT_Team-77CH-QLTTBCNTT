@@ -52,6 +52,10 @@ namespace QLTTBCNTT_WinForm
         }
         private void ModifyTBQN_Click(object sender, EventArgs e)
         {
+            if (!CheckIDTB_TBDV())
+            {
+                return;
+            }
             if (dtgvTBQN.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Chưa chọn dòng");
@@ -60,7 +64,7 @@ namespace QLTTBCNTT_WinForm
 
             DialogResult dlr = new DialogResult();
 
-            dlr = (DialogResult)MessageBox.Show("Sửa đổi thông tin?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            dlr = (DialogResult) MessageBox.Show("Sửa đổi thông tin?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (dlr.Equals(DialogResult.No))
             {
@@ -157,25 +161,25 @@ namespace QLTTBCNTT_WinForm
         {
             Display();
         }
-        private void ccbidQN_TextChanged(object sender, EventArgs e)
-        {
-           // if (cbbIDQN.Text != "") txtQN.Text = QueryTBQN.getTBQN_idQN(cbbIDQN.Text);
-        }
 
         private Boolean CheckIDTB_TBDV()
         {
-            string ds = QueryTBQN.getTBQN_idTB_check(cbbIDTB.Text);
+            if(DateBorrow.Value > DateReturn.Value)
+            {
+                MessageBox.Show("Bạn cần chọn ngày trả sau ngày mượn"); 
+                return false;
+            }
+            string ds = QueryTBQN.getTBQN_idTB_check(cbbIDTB.SelectedValue.ToString(), DateBorrow.Value, DateReturn.Value) + new QueryTBDonvi().getTBDV_idTB_check(cbbIDTB.SelectedValue.ToString(), DateBorrow.Value, DateReturn.Value);
             if (ds != "")
             {
                 MessageBox.Show("Thiết bị đã được biên chế hoặc được cho mượn. Xin vui lòng chọn thiết bị khác!");
-                cbbIDTB.Text = "";
                 return false;
             }
-            else return true;
-        }
-        private void cbbidTB_TextChanged(object sender, EventArgs e)
-        {
-           // if (cbbIDTB.Text != "") txtTB.Text = QueryTBQN.getTBDV_idTB(cbbIDTB.Text);
+            else
+            {
+                MessageBox.Show("Thiết bị hợp lệ, chưa được biên chế hoặc cho mượn");
+                return true;
+            } 
         }
 
         #endregion
