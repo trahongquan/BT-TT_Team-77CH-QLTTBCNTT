@@ -12,6 +12,11 @@ namespace QLTTBCNTT_WinForm.suport
         public static string Connectionstring = "Server = TRHQUAN\\TRHQUANMS;" + "uid=sa;pwd=1;" + "database=QLTTBCNTT";
         //public static string Connectionstring = "Server = TRHQUAN\\TRHQUANMS;" + "uid=sa;pwd=1;" + "database=QLTTBCNTT";
         public ConnectionString() { }
+        public ConnectionString( int i ) {
+            Console.WriteLine(i);
+        
+        }
+
         public static SqlConnection getConnection(){
             SqlConnection conn = new SqlConnection();
             try{
